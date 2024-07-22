@@ -1,0 +1,73 @@
+<customer>
+  <id>12345</id>
+  <name>John Doe</name>
+  <isActive>true</isActive>
+  <email>johndoe@example.com</email>
+  <phoneNumbers>
+    <phoneNumber>
+      <type>home</type>
+      <number>555-555-5555</number>
+    </phoneNumber>
+    <phoneNumber>
+      <type>work</type>
+      <number>555-555-1234</number>
+    </phoneNumber>
+  </phoneNumbers>
+  <address>
+    <street>123 Main St</street>
+    <city>Anytown</city>
+    <state>CA</state>
+    <postalCode>12345</postalCode>
+    <coordinates>
+      <latitude>37.7749</latitude>
+      <longitude>-122.4194</longitude>
+    </coordinates>
+  </address>
+  <preferences>
+    <contactMethod>email</contactMethod>
+    <newsletterSubscribed>false</newsletterSubscribed>
+    <language>en-US</language>
+  </preferences>
+  <orders>
+    <order>
+      <orderId>98765</orderId>
+      <date>2023-07-22T10:45:00Z</date>
+      <status>shipped</status>
+      <items>
+        <item>
+          <productId>1</productId>
+          <productName>Widget A</productName>
+          <quantity>2</quantity>
+          <price>19.99</price>
+        </item>
+        <item>
+          <productId>2</productId>
+          <productName>Widget B</productName>
+          <quantity>1</quantity>
+          <price>29.99</price>
+        </item>
+      </items>
+      <shippingAddress>
+        <street>456 Elm St</street>
+        <city>Othertown</city>
+        <state>NY</state>
+        <postalCode>67890</postalCode>
+      </shippingAddress>
+      <paymentMethod>
+        <type>creditCard</type>
+        <cardNumber>4111-1111-1111-1111</cardNumber>
+        <expirationDate>2025-12</expirationDate>
+      </paymentMethod>
+      <total>69.97</total>
+    </order>
+  </orders>
+  <metadata>
+    <createdDate>2023-01-01T12:00:00Z</createdDate>
+    <lastModifiedDate>2023-07-01T08:30:00Z</lastModifiedDate>
+    <tags>
+      <tag>customer</tag>
+      <tag>premium</tag>
+      <tag>newsletter</tag>
+    </tags>
+  </metadata>
+</customer>

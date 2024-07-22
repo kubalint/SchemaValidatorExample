@@ -1,0 +1,63 @@
+{
+    "id": 12345,
+    "name": "John Doe",
+    "isActive": true,
+    "email": "johndoe@example.com",
+    "phoneNumbers": [{
+            "type": "home",
+            "number": "555-555-5555"
+        }, {
+            "type": "work",
+        }
+    ],
+    "address": {
+        "street": "123 Main St",
+        "city": "Anytown",
+        "state": "CA",
+        "postalCode": "12345",
+        "coordinates": {
+            "latitude": "invalid latitude",
+            "longitude": -122.4194
+        }
+    },
+    "preferences": {
+        "contactMethod": "email",
+        "newsletterSubscribed": false,
+        "language": "en-US"
+    },
+    "orders": [{
+            "orderId": 98765,
+            "date": "2023-07-22T10:45:00Z",
+            "status": "shipped",
+            "items": [{
+                    "productId": 1,
+                    "productName": "Widget A",
+                    "quantity": 2,
+                    "price": 19.99
+                }, {
+                    "productId": 2,
+                    "productName": "Widget B",
+                    "quantity": 1,
+                    "price": 29.99
+                }
+            ],
+            "shippingAddress": {
+                "street": "456 Elm St",
+                "city": "Othertown",
+                "state": "NY",
+                "postalCode": "67890"
+            },
+            "paymentMethod": {
+                "type": "creditCard",
+                "cardNumber": "4111-1111-1111-1111",
+                "expirationDate": "2025-12"
+            },
+            "total": 69.97
+        }
+    ],
+    "metadata": {
+        "createdDate": "2023-01-01T12:00:00Z",
+        "lastModifiedDate": "2023-07-01T08:30:00Z",
+        "tags": ["customer", "premium", "newsletter"]
+    }
+}

@@ -1,0 +1,176 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "isActive": {
+            "type": "boolean"
+        },
+        "email": {
+            "type": "string",
+            "format": "email"
+        },
+        "phoneNumbers": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "number": {
+                        "type": "string"
+                    }
+                },
+                "required": ["type", "number"]
+            }
+        },
+        "address": {
+            "type": "object",
+            "properties": {
+                "street": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "postalCode": {
+                    "type": "string"
+                },
+                "coordinates": {
+                    "type": "object",
+                    "properties": {
+                        "latitude": {
+                            "type": "number"
+                        },
+                        "longitude": {
+                            "type": "number"
+                        }
+                    },
+                    "required": ["latitude", "longitude"]
+                }
+            },
+            "required": ["street", "city", "state", "postalCode", "coordinates"]
+        },
+        "preferences": {
+            "type": "object",
+            "properties": {
+                "contactMethod": {
+                    "type": "string"
+                },
+                "newsletterSubscribed": {
+                    "type": "boolean"
+                },
+                "language": {
+                    "type": "string"
+                }
+            },
+            "required": ["contactMethod", "newsletterSubscribed", "language"]
+        },
+        "orders": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "orderId": {
+                        "type": "integer"
+                    },
+                    "date": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "productId": {
+                                    "type": "integer"
+                                },
+                                "productName": {
+                                    "type": "string"
+                                },
+                                "quantity": {
+                                    "type": "integer"
+                                },
+                                "price": {
+                                    "type": "number"
+                                }
+                            },
+                            "required": ["productId", "productName", "quantity", "price"]
+                        }
+                    },
+                    "shippingAddress": {
+                        "type": "object",
+                        "properties": {
+                            "street": {
+                                "type": "string"
+                            },
+                            "city": {
+                                "type": "string"
+                            },
+                            "state": {
+                                "type": "string"
+                            },
+                            "postalCode": {
+                                "type": "string"
+                            }
+                        },
+                        "required": ["street", "city", "state", "postalCode"]
+                    },
+                    "paymentMethod": {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string"
+                            },
+                            "cardNumber": {
+                                "type": "string"
+                            },
+                            "expirationDate": {
+                                "type": "string"
+                            }
+                        },
+                        "required": ["type", "cardNumber", "expirationDate"]
+                    },
+                    "total": {
+                        "type": "number"
+                    }
+                },
+                "required": ["orderId", "date", "status", "items", "shippingAddress", "paymentMethod", "total"]
+            }
+        },
+        "metadata": {
+            "type": "object",
+            "properties": {
+                "createdDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "lastModifiedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["createdDate", "lastModifiedDate", "tags"]
+        }
+    },
+    "required": ["id", "name", "isActive", "email", "phoneNumbers", "address", "preferences", "orders", "metadata"]
+}
